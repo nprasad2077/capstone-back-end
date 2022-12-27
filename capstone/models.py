@@ -9,7 +9,10 @@ class Astronaut(models.Model):
     photo_url = models.TextField()
     planets = ArrayField(models.CharField(max_length=100, blank=True))
 
-
     def __str__(self):
         return self.name
+
+class Post(models.Model):
+    astronaut: models.ForeignKey(Astronaut, on_delete=models.CASCADE, related_name='posts')
+
 
