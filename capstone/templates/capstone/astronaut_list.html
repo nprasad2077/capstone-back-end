@@ -1,0 +1,9 @@
+<!-- tunr/templates/tunr/artist_list.html -->
+<h2>Astronauts <a href="">(+)</a></h2>
+<ul>
+  {% for astronaut in astronauts %}
+  <li>
+    <a href="">{{ astronaut.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
