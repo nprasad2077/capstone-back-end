@@ -1,0 +1,12 @@
+<!-- tunr/templates/tunr/artist_detail.html -->
+<h2>{{ astronaut.name }} <a href="">(edit)</a></h2>
+<h4>{{ astronaut.favorite_planet }}</h4>
+
+<h3>Posts <a href="">(+)</a></h3>
+<ul>
+  {% for forum in astronaut.forums.all %}
+  <li>
+    <a href="">{{ forum.title }}-{{ forum.photo }}</a>
+  </li>
+  {% endfor %}
+</ul>

@@ -3,7 +3,7 @@
 <ul>
   {% for astronaut in astronauts %}
   <li>
-    <a href="">{{ astronaut.name }}</a>
+    <a href="{% url 'astronaut_detail' pk=astronaut.pk %}">{{ astronaut.name }}</a>
   </li>
   {% endfor %}
 </ul>

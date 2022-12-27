@@ -8,3 +8,7 @@ def astronaut_list(request):
 def forum_list(request):
     forums = Forum.objects.all()
     return render(request, 'capstone/forum_list.html', {'forums': forums})
+
+def astronaut_detail(request, pk):
+    astronaut = Astronaut.objects.get(id=pk)
+    return render(request, 'capstone/astronaut_detail.html', {'astronaut': astronaut})
