@@ -3,7 +3,7 @@
 <ul>
   {% for forum in forums %}
   <li>
-    <a href="">{{ forum.title }}</a>
+    <a href="{% url 'forum_detail' pk=forum.pk %}">{{ forum.title }}</a>
   </li>
   {% endfor %}
 </ul>

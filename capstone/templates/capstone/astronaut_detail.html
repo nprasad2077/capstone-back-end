@@ -6,7 +6,7 @@
 <ul>
   {% for forum in astronaut.forums.all %}
   <li>
-    <a href="">{{ forum.title }}-{{ forum.photo }}</a>
+    <a href="{% url 'forum_detail' pk=forum.pk %}">{{ forum.title }}-{{ forum.photo }}</a>
   </li>
   {% endfor %}
 </ul>
