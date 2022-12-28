@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Astronaut, Forum
 
 def astronaut_list(request):
@@ -16,3 +16,4 @@ def astronaut_detail(request, pk):
 def forum_detail(request, pk):
     forum = Forum.objects.get(id=pk)
     return render(request, 'capstone/forum_detail.html', {'forum': forum})
+
