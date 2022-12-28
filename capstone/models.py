@@ -15,8 +15,8 @@ class Astronaut(models.Model):
 
 class Forum(models.Model):
     astronaut = models.ForeignKey(Astronaut, on_delete=models.CASCADE, related_name='forums')
-    title = models.CharField(max_length=100, default='no title')
-    photo = models.CharField(max_length=100, default='no photo')
+    title = models.CharField(max_length=100)
+    photo = models.CharField(max_length=100)
     preview_url = models.CharField(max_length=200, null=True)
 
     def __str__(self):

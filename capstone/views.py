@@ -20,7 +20,7 @@ def forum_detail(request, pk):
 
 def astronaut_create(request):
     if request.method == 'POST':
-        form = AstronautForm(request.post)
+        form = AstronautForm(request.POST)
         if form.is_valid():
             astronaut = form.save()
             return redirect('astronaut_detail', pk=astronaut.pk)
@@ -30,7 +30,7 @@ def astronaut_create(request):
 
 def forum_create(request):
     if request.method == 'POST':
-        form = ForumForm(request.post)
+        form = ForumForm(request.POST)
         if form.is_valid():
             forum = form.save()
             return redirect('forum_detail', pk=forum.pk)
