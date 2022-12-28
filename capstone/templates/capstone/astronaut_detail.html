@@ -3,6 +3,8 @@
 <h2>{{ astronaut.name }} <a href="{% url 'astronaut_edit' pk=astronaut.pk %}">(edit)</a></h2>
 <h4>{{ astronaut.favorite_planet }}</h4>
 
+<a href="{% url 'astronaut_delete' pk=astronaut.pk %}">Delete</a>
+
 <h3>Posts <a href="{% url 'forum_create' %}">(+)</a></h3>
 <ul>
   {% for forum in astronaut.forums.all %}

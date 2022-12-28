@@ -59,4 +59,12 @@ def forum_edit(request, pk):
     else:
         form = ForumForm(instance=forum)
     return render(request, 'capstone/forum_form.html', {'form': form})
+
+def astronaut_delete(request, pk):
+    Astronaut.objects.get(id=pk).delete()
+    return redirect('astronaut_list')
+
+def forum_delete(request, pk):
+    Forum.objects.get(id=pk).delete()
+    return redirect('forum_list')
         

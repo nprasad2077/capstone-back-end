@@ -3,4 +3,6 @@
 <h3>By: {{ forum.astronaut.name }}</h3>
 
 Photo Link: {{ forum.photo }}
+
+<a href="{% url 'forum_delete' pk=forum.pk %}">Delete</a>
 {% endblock %}
