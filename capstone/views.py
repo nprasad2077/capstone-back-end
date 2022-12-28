@@ -37,3 +37,14 @@ def forum_create(request):
     else:
         form = ForumForm()
     return render(request, 'capstone/forum_form.html', {'form': form})
+
+def astronaut_edit(request, pk):
+    astronaut = Astronaut.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = AstronautForm(request.POST, instance=astronaut)
+        if form.is_valid():
+            astronaut = form.save()
+            return redirect('astronaut_detail', pk=astronaut.pk)
+    else:
+        form = AstronautForm(instance=astronaut)
+    return render (request, 'capstone/astronaut_form.html', {'form': form})

@@ -1,6 +1,6 @@
 <!-- tunr/templates/tunr/artist_detail.html -->
 {% extends 'capstone/base.html' %} {% block content %}
-<h2>{{ astronaut.name }} <a href="">(edit)</a></h2>
+<h2>{{ astronaut.name }} <a href="{% url 'astronaut_edit' pk=astronaut.pk %}">(edit)</a></h2>
 <h4>{{ astronaut.favorite_planet }}</h4>
 
 <h3>Posts <a href="{% url 'forum_create' %}">(+)</a></h3>
