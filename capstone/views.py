@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Astronaut, Forum
 from .forms import AstronautForm, ForumForm
+from django.http import JsonResponse
 
 def astronaut_list(request):
     astronauts = Astronaut.objects.all()
