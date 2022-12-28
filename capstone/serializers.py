@@ -9,7 +9,7 @@ class AstronautSerializer(serializers.HyperlinkedModelSerializer):
     )
     class Meta:
         model = Astronaut
-        fields = ('id', 'name', 'favorite_planet', 'photo_url', 'planets',)
+        fields = ('id', 'name', 'favorite_planet', 'photo_url', 'planets', 'forums',)
 
 class ForumSerializer(serializers.HyperlinkedModelSerializer):
     astronaut = serializers.HyperlinkedRelatedField(
