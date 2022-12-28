@@ -7,8 +7,7 @@ class Astronaut(models.Model):
     name = models.CharField(max_length=100)
     favorite_planet = models.CharField(max_length=100)
     photo_url = models.TextField()
-    planets = ArrayField(models.CharField(max_length=100, blank=True))
-    favorites: ArrayField(models.CharField(max_length=500, blank=True))
+    planets = ArrayField(models.CharField(max_length=100,default='no planets', blank=True))
 
     def __str__(self):
         return self.name
