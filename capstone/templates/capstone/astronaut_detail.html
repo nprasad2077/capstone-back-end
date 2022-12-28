@@ -1,4 +1,5 @@
 <!-- tunr/templates/tunr/artist_detail.html -->
+{% extends 'capstone/base.html' %} {% block content %}
 <h2>{{ astronaut.name }} <a href="">(edit)</a></h2>
 <h4>{{ astronaut.favorite_planet }}</h4>
 
@@ -10,3 +11,4 @@
   </li>
   {% endfor %}
 </ul>
+{% endblock %}

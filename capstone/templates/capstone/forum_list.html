@@ -1,4 +1,5 @@
 <!-- tunr/templates/tunr/song_list.html -->
+{% extends 'capstone/base.html' %} {% block content %}
 <h2>Forum Posts</h2>
 <ul>
   {% for forum in forums %}
@@ -7,3 +8,4 @@
   </li>
   {% endfor %}
 </ul>
+{% endblock %}
