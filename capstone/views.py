@@ -48,3 +48,15 @@ def astronaut_edit(request, pk):
     else:
         form = AstronautForm(instance=astronaut)
     return render (request, 'capstone/astronaut_form.html', {'form': form})
+
+def forum_edit(request, pk):
+    forum = Forum.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = ForumForm(request.POST, instance=forum)
+        if form.is_valid():
+            forum = form.save()
+            return redirect('forum_detail', pk=forum.pk)
+    else:
+        form = ForumForm(instance=forum)
+    return render(request, 'capstone/forum_form.html', {'form': form})
+        

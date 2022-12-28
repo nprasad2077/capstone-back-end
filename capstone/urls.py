@@ -10,4 +10,5 @@ urlpatterns = [
     path('astronauts/new', views.astronaut_create, name='astronaut_create'),
     path('forums/new', views.forum_create, name='forum_create'),
     path('astronauts/<int:pk>/edit', views.astronaut_edit, name='astronaut_edit'),
+    path('forums/<int:pk>/edit', views.forum_edit, name='forum_edit'),
 ]
