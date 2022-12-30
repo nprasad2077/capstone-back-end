@@ -94,13 +94,19 @@ WSGI_APPLICATION = 'capstone_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#   'default': dj_database_url.config(conn_max_age=600)
+# }
+
 DATABASES = {
-  'default': dj_database_url.config(conn_max_age=600)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'capstone',
+        'USER': 'ravi',
+        'PASSWORD': 'houston',
+        'HOST': 'localhost'
+    }
 }
-
-DATABASE_URL=postgres://ravi:houston@localhost:5432/capstone
-# Example: DATABASE_URL=postgres://petsuser:pets@localhost:5432/pets
-
 
 
 # Password validation
