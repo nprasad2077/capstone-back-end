@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+  <head>
+    <title>Capstone</title>
+    <link rel="stylesheet" href="{% static 'css/capstone.css' %}" />
+  </head>
+  <body>
+    <h1>Planetarium</h1>
+    <nav>
+      <a href="/forums">Forums</a>
+      <a href="/">Astronauts</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>

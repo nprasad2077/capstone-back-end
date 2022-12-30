@@ -1,0 +1,11 @@
+<!-- tunr/templates/tunr/artist_list.html -->
+{% extends 'capstone/base.html' %} {% block content %}
+<h2>Astronauts <a href="{% url 'astronaut_create' %}">(+)</a></h2>
+<ul>
+  {% for astronaut in astronauts %}
+  <li>
+    <a href="{% url 'astronaut_detail' pk=astronaut.pk %}">{{ astronaut.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

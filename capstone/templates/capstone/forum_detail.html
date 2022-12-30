@@ -1,0 +1,8 @@
+{% extends 'capstone/base.html' %} {% block content %}
+<h2>{{ forum.title }} <a href="{% url 'forum_edit' pk=forum.pk %}">(edit)</a></h2>
+<h3>By: {{ forum.astronaut.name }}</h3>
+
+Photo Link: {{ forum.photo }}
+
+<a href="{% url 'forum_delete' pk=forum.pk %}">Delete</a>
+{% endblock %}
