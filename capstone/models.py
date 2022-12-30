@@ -7,7 +7,7 @@ class Astronaut(models.Model):
     name = models.CharField(max_length=100)
     favorite_planet = models.CharField(max_length=100)
     photo_url = models.TextField()
-    planets = ArrayField(models.CharField(max_length=100,default='no planets', blank=True))
+    planets = ArrayField(models.CharField(max_length=100, default=['none']))
 
     def __str__(self):
         return self.name
@@ -22,3 +22,9 @@ class Forum(models.Model):
     def __str__(self):
         return self.title
 
+{
+    "name": "",
+    "favorite_planet": "",
+    "photo_url": "",
+    "planets": []
+}

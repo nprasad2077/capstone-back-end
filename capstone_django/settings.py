@@ -38,8 +38,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'capstone',
-    'django_extensions'
+    'django_extensions',
+    'rest_framework',
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
