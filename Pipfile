@@ -9,6 +9,10 @@ psycopg2-binary = "*"
 ipython = "*"
 django-extensions = "*"
 djangorestframework = "*"
+whitenoise = "*"
+dj-database-url = "*"
+gunicorn = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
