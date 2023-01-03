@@ -22,9 +22,3 @@ class Forum(models.Model):
     def __str__(self):
         return self.title
 
-{
-    "name": "",
-    "favorite_planet": "",
-    "photo_url": "",
-    "planets": []
-}
